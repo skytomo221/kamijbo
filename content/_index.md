@@ -1,7 +1,7 @@
 ---
-title : "Modern Documentation Theme"
-description: "Doks is a Hugo theme helping you build modern documentation websites that are secure, fast, and SEO-ready — by default."
-lead: "Doks is a Hugo theme helping you build modern documentation websites that are secure, fast, and SEO-ready — by default."
+title : "神なら分かるロジバン入門"
+description: "神様のためのモダンなロジバンの入門書！ロジバンの歴史から、ロジバンの方言、最近の動向までを大体網羅！（したい！）"
+lead: "神様のためのモダンなロジバンの入門書！ロジバンの歴史から、ロジバンの方言、最近の動向までを大体網羅！（したい！）"
 date: 2020-10-06T08:47:36+00:00
 lastmod: 2020-10-06T08:47:36+00:00
 draft: false
