@@ -18,6 +18,7 @@
     "create": "hugo new",
     "prestart": "npm run clean",
     "start": "hugo server --bind=0.0.0.0 --disableFastRender",
+    "start:draft": "hugo server --bind=0.0.0.0 -D --disableFastRender",
     "prebuild": "npm run clean",
     "build": "hugo --gc --minify && npm run build:functions",
     "build:functions": "netlify-lambda build assets/lambda",
