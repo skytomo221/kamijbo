@@ -1,4 +1,3 @@
+delete_branch: delete
 labels:
   - dependencies
- delete_branch: delete
- 
