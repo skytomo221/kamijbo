@@ -4,22 +4,39 @@
 title = "Doks"
 titleSeparator = "-"
 titleAddition = "Modern Documentation Theme"
-description = "Doks is a Hugo theme helping you build modern documentation websites that are secure, fast, and SEO-ready — by default."
+description = "Doks is a Hugo theme for building secure, fast, and SEO-ready documentation websites, which you can easily update and customize."
 
-## Open Graph + Twitter Cards
+## Documentation
+# docsVersion = "0.3"
+
+## Open Graph
 images = ["doks.png"]
-twitterSite = "henkverlinde"
-twitterCreator = "henkverlinde"
-facebookAuthor = "verlinde.henk"
-facebookPublisher = "verlinde.henk"
 ogLocale = "en_US"
+domainTLD = "doks.netlify.app"
+titleHome = "Doks Theme"
+
+## Twitter Cards
+twitterSite = "@getdoks"
+twitterCreator = "@henkverlinde"
 
 ## JSON-LD
+# schemaType = "Person"
 schemaType = "Organization"
+schemaName = "Doks"
+schemaAuthor = "Henk Verlinde"
+schemaAuthorTwitter = "https://twitter.com/henkverlinde"
+schemaAuthorLinkedIn = "https://www.linkedin.com/in/henkverlinde/"
+schemaAuthorGitHub = "https://github.com/h-enk"
+schemaLocale = "en-US"
 schemaLogo = "logo-doks.png"
-schemaTwitter = "https://twitter.com/henkverlinde"
-schemaLinkedIn = "https://www.linkedin.com/in/henkverlinde/"
-schemaGitHub = "https://github.com/h-enk"
+schemaLogoWidth = 512
+schemaLogoHeight = 512
+schemaImage = "doks.png"
+schemaImageWidth = 1280
+schemaImageHeight = 640
+schemaTwitter = "https://twitter.com/getdoks"
+schemaLinkedIn = ""
+schemaGitHub = "https://github.com/h-enk/doks"
 schemaSection = "blog"
 
 ## Sitelinks Search Box
@@ -34,16 +51,26 @@ bgColor = "#fff"
 landscapePhotoWidths = [900, 800, 700, 600, 500]
 portraitPhotoWidths = [800, 700, 600, 500]
 lqipWidth = "20x"
+smallLimit = "300"
 
 # Footer
 footer = "Powered by <a href=\"https://www.netlify.com/\">Netlify</a>, <a href=\"https://gohugo.io/\">Hugo</a>, and <a href=\"https://getdoks.org/\">Doks</a>"
 
+# Feed
+copyRight = "Copyright (c) 2020-2021 Henk Verlinde"
+
 # Alert
 alert = false
-alertText = "Like Doks? <a class=\"alert-link\" href=\"https://github.com/h-enk/doks/stargazers\">Star on GitHub</a>. Thanks!</a>"
+alertDismissable = true
+# alertText = "Introducing the Doks child theme, several DX + UX updates, and more! <a class=\"alert-link stretched-link\" href=\"https://getdoks.org/blog/doks-v0.2/\" target=\"_blank\" rel=\"noopener\">Check out Doks v0.2</a>"
+alertText = "Introducing the Doks child theme, several DX + UX updates, and more! <a class=\"alert-link stretched-link\" href=\"https://getdoks.org/blog/doks-v0.2/\">Check out Doks v0.2</a>"
 
 # Edit Page
+# repoHost [Github | Gitea | GitLab] is used for building the edit link based on git hoster
+repoHost = "GitHub"
+#repoHost = "Gitea"
 docsRepo = "https://github.com/h-enk/doks"
+docsRepoBranch = "master"
 editPage = false
 
 [options]
@@ -52,7 +79,10 @@ editPage = false
   instantPage = true
   flexSearch = true
   darkMode = true
-  bootStrapJs = false
+  bootStrapJs = true
   breadCrumb = false
   highLight = true
   kaTex = false
+  collapsibleSidebar = true
+  multilingualMode = false
+  docsVersioning = false

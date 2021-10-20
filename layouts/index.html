@@ -6,52 +6,48 @@
     </div>
     <div class="col-lg-9 col-xl-8 text-center">
       <p class="lead">{{ .Params.lead | safeHTML }}</p>
-      <a class="btn btn-primary btn-lg px-4 mb-2" href="{{ "docs/prologue/0/" | relURL }}" role="button">さあ始めましょう！</a>
-      <p class="meta">Open-source MIT Licensed. <a href="https://github.com/h-enk/doks">GitHub v{{
-          .Site.Data.doks.version }}</a></p>
+      <a class="btn btn-primary btn-lg px-4 mb-2" href="/docs/{{ if .Site.Params.options.docsVersioning }}{{ .Site.Params.docsVersion }}/{{ end }}prologue/introduction/" role="button">Get Started</a>
+      <p class="meta">Open-source MIT Licensed. <a href="https://github.com/h-enk/doks">GitHub v{{ $data := getJSON "/package.json" }}{{ $data.version }}</a></p>
     </div>
   </div>
 </section>
 {{ end }}
 
 {{ define "sidebar-prefooter" }}
-<section class="section section-sm">
-  <div class="row justify-content-center">
-    <div class="col-lg-12 text-center">
-      <h2 class="mt-0">ロジバンとは？</h2>
-    </div>
-  </div>
+  {{ if eq $.Site.Language.LanguageName "English" }}
+  <section class="section section-sm">
     <div class="container">
-    <div class="row justify-content-center text-center">
-      <div class="col-lg-5">
-        <h2 class="h4">計画的に作られた言語 🏗</h2>
-        <p>ロジバンは人が話すことに使えるように、計画的に作られた言語です。1987年に公表され、2000年代前半から実用的な使用に耐えることができるようになりました。</p>
+      <div class="row justify-content-center text-center">
+        <div class="col-lg-5">
+          <h2 class="h4">Security aware</h2>
+          <p>Get A+ scores on <a href="https://observatory.mozilla.org/analyze/doks.netlify.app">Mozilla Observatory</a> out of the box. Easily change the default Security Headers to suit your needs.</p>
+        </div>
+        <div class="col-lg-5">
+          <h2 class="h4">Fast by default ⚡️</h2>
+          <p>Get 100 scores on <a href="https://googlechrome.github.io/lighthouse/viewer/?gist=92eaa982d7dbf92f94fe8ecc03987c9a">Google Lighthouse</a> by default. Doks removes unused css, prefetches links, and lazy loads images.</p>
+        </div>
+        <div class="col-lg-5">
+          <h2 class="h4">SEO-ready</h2>
+          <p>Use sensible defaults for structured data, open graph, and Twitter cards. Or easily change the SEO settings to your liking.</p>
+        </div>
       </div>
-      <div class="col-lg-5">
-        <h2 class="h4">文化的に中立 ⚖️</h2>
-        <p>ロジバンは文化的相違や性別に関してできるだけ中立になるように配慮されています。例えば、多くの語彙は、偏見がないように、複数の自然言語から話者数に応じた重みによって生成されます。</p>
-      </div>
-      <div class="col-lg-5">
-        <h2 class="h4">思考の制限を取り除く 🧠</h2>
-        <p>ロジバンは人間の思考に対するいくつかの制限を取り除くことを試みるために作られました。自然言語の贅肉を取り払った簡潔な表現が可能です。</p>
+      <div class="row justify-content-center text-center">
+        <div class="col-lg-5">
+          <h2 class="h4">Full text search</h2>
+          <p>Search your Doks site with FlexSearch. Easily customize index settings and search options to your liking.</p>
+        </div>
+        <div class="col-lg-5">
+          <h2 class="h4">Page layouts</h2>
+          <p>Build pages with a landing page, blog, or documentation layout. Add custom sections and components to suit your needs.</p>
+        </div>
+        <div class="col-lg-5">
+          <h2 class="h4">Dark mode</h2>
+          <p>Switch to a low-light UI with the click of a button. Change colors with variables to match your branding.</p>
+        </div>
       </div>
     </div>
-    <div class="row justify-content-center text-center">
-      <div class="col-lg-5">
-        <h2 class="h4">規則的で非曖昧で柔軟な文法 🤖</h2>
-        <p>ロジバンの文法はとても規則的です。構文はコンピュータが認識できるほどに非曖昧です。それでいて敢えて曖昧な表現をすることができる柔軟性を持ち合わせています。</p>
-      </div>
-      <div class="col-lg-5">
-        <h2 class="h4">シンプルな感情表現 💕</h2>
-        <p>ロジバンには気持ちや態度を表すための特別な言葉が揃っています。これによって絵文字のようにシンプルでかつ感情豊かな表現ができます。</p>
-      </div>
-      <div class="col-lg-5">
-        <h2 class="h4">述語論理を基盤とした言語 📚</h2>
-        <p>ロジバンは述語論理を文法の基盤としています。そのため、自然言語では表現が困難であるような複雑な構造を明晰に記述できます。</p>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
+  {{ end }}
 {{ end }}
 
 {{ define "sidebar-footer" }}
