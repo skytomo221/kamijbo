@@ -38,7 +38,7 @@ jobs:
     - name: Upgrade NPM
       run: npm install -g npm
 
-      - name: Install dependencies
+    - name: Install dependencies
       run: npm ci
     
     - name: Check for linting errors
